@@ -24,7 +24,7 @@
 
     <!-- Music Player & Lyrics -->
     <div class="music-player">
-        <audio id="bg-audio" loop>
+        <audio id="bg-audio" autoplay loop>
             <source src="song/초마패패키지.mp3" type="audio/mpeg">
         </audio>
         <button id="music-toggle" class="music-btn">
@@ -190,13 +190,14 @@
                         </div>
                         <ul class="features">
                             <li><i data-lucide="check"></i>랜딩 페이지 제작 <span class="item-price">(₩400k → ₩200k)</span></li>
-                            <li><i data-lucide="check"></i>SEO 최적화 + 도메인 <span class="item-price">(₩200k → ₩100k)</span></li>
+                            <li><i data-lucide="check"></i>홈페이지 SEO 최적화 <span class="item-price">(₩100k → ₩50k)</span></li>
                             <li><i data-lucide="check"></i>블로그 스킨 (일반형) <span class="item-price">(₩100k → ₩50k)</span></li>
-                            <li><i data-lucide="check"></i>SNS/쓰레드/카톡 세팅 <span class="item-price">(₩300k → ₩150k)</span></li>
+                            <li><i data-lucide="check"></i>SNS 기초 세팅 (인스타/카톡) <span class="item-price">(₩200k → ₩100k)</span></li>
                             <li><i data-lucide="check"></i>유튜브 기초+알고리즘 <span class="item-price">(₩300k → ₩150k)</span></li>
                             <li><i data-lucide="check"></i>스마트 플레이스 세팅 <span class="item-price">(₩200k → ₩100k)</span></li>
                             <li><i data-lucide="check"></i>블로그 초기 배포 (10건) <span class="item-price">(₩200k → ₩100k)</span></li>
-                            <li><i data-lucide="check"></i>로고 + 디지털 명함 <span class="item-price">(₩300k → ₩150k)</span></li>
+                            <li><i data-lucide="check"></i>디지털 로고 디자인 <span class="item-price">(₩200k → ₩100k)</span></li>
+                            <li><i data-lucide="check"></i><strong>초기 운영 통합 컨설팅</strong> <span class="item-price">(₩300k → ₩150k)</span></li>
                         </ul>
                         <a href="#contact" class="btn-card primary">선택하기</a>
                     </div>
@@ -211,15 +212,12 @@
                             </div>
                         </div>
                         <ul class="features">
-                            <li><i data-lucide="check"></i>랜딩 페이지 + SEO <span class="item-price">(₩600k → ₩300k)</span></li>
-                            <li><i data-lucide="check"></i>블로그 스킨 (고급형) <span class="item-price">(₩200k → ₩100k)</span></li>
-                            <li><i data-lucide="check"></i>유튜브 + SNS/쓰레드 <span class="item-price">(₩600k → ₩300k)</span></li>
-                            <li><i data-lucide="check"></i>스마트 플레이스 세팅 <span class="item-price">(₩200k → ₩100k)</span></li>
+                            <li><i data-lucide="check"></i>실속형 모든 항목 포함 <span class="item-price">(₩1,300k → ₩650k)</span></li>
                             <li><i data-lucide="check"></i>홍보 기업 영상 (Lite) <span class="item-price">(₩1,000k → ₩500k)</span></li>
                             <li><i data-lucide="check"></i>비즈니스 자동화 (Lite) <span class="item-price">(₩1,000k → ₩500k)</span></li>
                             <li><i data-lucide="check"></i>블로그 배포 (20건) <span class="item-price">(₩400k → ₩200k)</span></li>
                             <li><i data-lucide="check"></i>리뷰 체험단 (10인) <span class="item-price">(₩200k → ₩100k)</span></li>
-                            <li><i data-lucide="check"></i>패키지 전용 로고 서비스 <span class="item-price">(Included)</span></li>
+                            <li><i data-lucide="check"></i>디지털 로고 디자인 <span class="item-price">(₩100k → ₩50k)</span></li>
                         </ul>
                         <a href="#contact" class="btn-card">선택하기</a>
                     </div>
@@ -739,9 +737,11 @@
 
         // Try auto-play on first interaction
         document.addEventListener('click', () => {
-            if (!isPlaying && audio.paused) {
-                // optional: auto-start removed to comply with browser policies 
-                // and user control preference, but can be forced here if desired
+            if (audio.paused) {
+                audio.play();
+                isPlaying = true;
+                visualizer.classList.add('active');
+                document.querySelector('.music-label').innerText = "BGM ON";
             }
         }, { once: true });
     </script>
