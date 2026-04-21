@@ -87,9 +87,14 @@ body {
 header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.5rem 0;
+    background: transparent;
+    transition: var(--transition);
+}
+
+header.scrolled {
     background: rgba(10, 12, 16, 0.8);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
@@ -101,7 +106,7 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 1.5rem 2rem;
 }
 
 .logo, .footer-logo {
