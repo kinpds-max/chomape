@@ -722,15 +722,20 @@
             }
         });
 
-        // Try auto-play on first interaction
-        document.addEventListener('click', () => {
+        // Try auto-play on first interaction (Click, Touch, Scroll, MouseMove)
+        const startAudio = () => {
             if (audio.paused) {
-                audio.play();
-                isPlaying = true;
-                visualizer.classList.add('active');
-                document.querySelector('.music-label').innerText = "BGM ON";
+                audio.play().then(() => {
+                    isPlaying = true;
+                    visualizer.classList.add('active');
+                    document.querySelector('.music-label').innerText = "BGM ON";
+                }).catch(err => console.log("Autoplay blocked:", err));
             }
-        }, { once: true });
+        };
+
+        ['click', 'touchstart', 'mousemove', 'scroll'].forEach(event => {
+            document.addEventListener(event, startAudio, { once: true });
+        });
     </script>
 </body>
 
