@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>초마패 - 초기 마케팅 패키지 | 오픈기념 50% 할인</title>
+    <meta name="description" content="사장님은 일만 하세요, 마케팅은 초마패가 해결합니다. 블로그, 유튜브, 인스타그램 등 초기 마케팅의 모든 것. 오픈 기념 50% 파격 할인 중!">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Music Player & Lyrics -->
+    <div class="music-player">
+        <audio id="bg-audio" loop>
+            <source src="song/초마패패키지.mp3" type="audio/mpeg">
+        </audio>
+        <button id="music-toggle" class="music-btn">
+            <div class="visualizer">
+                <span></span><span></span><span></span><span></span>
+            </div>
+            <span class="music-label">BGM ON</span>
+            <i data-lucide="music" class="music-icon"></i>
+        </button>
+        <div id="lyrics-container" class="lyrics-box">
+            <p id="current-lyric">마케팅의 시작, 초마패와 함께!</p>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-text">초마패</span>
+                <span class="logo-phone">1660-1195</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">브랜드 스토리</a></li>
+                <li><a href="#services">제공 서비스</a></li>
+                <li><a href="#pricing">요금 안내</a></li>
+                <li><a href="#contact" class="btn-primary">상담 신청</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-bg-img" style="background-image: url('images/hero_banner.png');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="badge fade-in">GRAND OPENING 50% OFF</div>
+                <h1 class="hero-title" data-reveal>창업지원에 <span class="highlight">'초창패'</span>가 있다면<br>마케팅에는 <span class="highlight">'초마패'</span>가 있다</h1>
+                <p class="hero-subtitle" data-reveal>사장님 열심히 일만하세요.<br>마케팅은 초마패가 가장 효율적으로 진행하겠습니다.</p>
+                <div class="hero-btns" data-reveal>
+                    <a href="#pricing" class="btn-main">패키지 확인하기</a>
+                    <a href="#contact" class="btn-secondary">무료 컨설팅 신청</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <h2>Why 초마패?</h2>
+                    <p>검증된 실력으로 확실한 성과를 약속합니다.</p>
+                </div>
+                <div class="trust-grid">
+                    <div class="trust-card" data-reveal>
+                        <i data-lucide="building-2"></i>
+                        <h3>부동산업 효율마케팅 출신</h3>
+                        <p>가장 치열한 시장에서 검증된 고효율 마케팅 로직을 보유하고 있습니다.</p>
+                    </div>
+                    <div class="trust-card" data-reveal>
+                        <i data-lucide="rocket"></i>
+                        <h3>다양한 회사 실제 운영</h3>
+                        <p>마케팅 회사 외에도 현재 다양한 회사를 직접 운영하며 사장님, 기업인, 개인의 입장에서 깊이 있는 솔루션을 제안합니다.</p>
+                    </div>
+                    <div class="trust-card" data-reveal>
+                        <i data-lucide="users"></i>
+                        <h3>분야별 대표님 협업 인프라</h3>
+                        <p>디자인, 영상, 카피라이팅 등 각 분야 전문가들과의 탄탄한 네트워크를 보유하고 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <h2>All-in-One 채널 관리</h2>
+                    <p>어떤 채널이든 초마패와 함께라면 완벽하게 구축됩니다.</p>
+                </div>
+                <div class="service-tabs" data-reveal>
+                    <div class="service-item">
+                        <div class="icon-box"><i data-lucide="pen"></i></div>
+                        <span>블로그</span>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon-box"><i data-lucide="youtube"></i></div>
+                        <span>유튜브</span>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon-box"><i data-lucide="instagram"></i></div>
+                        <span>인스타</span>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon-box"><i data-lucide="hash"></i></div>
+                        <span>쓰레드</span>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon-box"><i data-lucide="map-pin"></i></div>
+                        <span>스마트 플레이스</span>
+                    </div>
+                </div>
+                
+                <div class="optional-services" data-reveal>
+                    <h3>Special Options</h3>
+                    <div class="opt-grid">
+                        <div class="opt-card">
+                            <h4>블로그 대량 배포</h4>
+                            <p>빠른 정보 확산을 위한 최적의 솔루션</p>
+                        </div>
+                        <div class="opt-card">
+                            <h4>리뷰 체험단</h4>
+                            <p>실제 이용 고객의 생생한 후기 확보</p>
+                        </div>
+                        <div class="opt-card">
+                            <h4>파워링크 광고</h4>
+                            <p>검색 결과 최상단 노출로 유입 극대화</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <h2>추천 초기세팅패키지</h2>
+                    <p>비즈니스 규모와 목적에 맞는 최적의 플랜을 선택하세요.</p>
+                </div>
+                <div class="price-grid">
+                    <!-- 실속형 -->
+                    <div class="price-card" data-reveal>
+                        <div class="card-header">
+                            <h3>실속형</h3>
+                            <div class="price">
+                                <span class="original">₩1,260,000</span>
+                                <span class="discounted">₩600,000<span>/회</span></span>
+                            </div>
+                        </div>
+                        <ul class="features">
+                            <li><i data-lucide="check"></i>랜딩 페이지 제작 <span class="item-price">(₩400k → ₩200k)</span></li>
+                            <li><i data-lucide="check"></i>홈페이지 SEO 최적화 <span class="item-price">(₩100k → ₩50k)</span></li>
+                            <li><i data-lucide="check"></i>블로그 스킨 (일반형) <span class="item-price">(₩100k → ₩50k)</span></li>
+                            <li><i data-lucide="check"></i>SNS 기초 세팅 (인스타/카톡) <span class="item-price">(₩200k → ₩100k)</span></li>
+                            <li><i data-lucide="check"></i>유튜브 기초+알고리즘 <span class="item-price">(₩300k → ₩150k)</span></li>
+                            <li><i data-lucide="check"></i>스마트 플레이스 세팅 <span class="item-price">(₩200k → ₩100k)</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-card">선택하기</a>
+                    </div>
+
+                    <!-- 일반형 -->
+                    <div class="price-card popular" data-reveal>
+                        <div class="popular-tag">BEST</div>
+                        <div class="card-header">
+                            <h3>일반형</h3>
+                            <div class="price">
+                                <span class="original">₩2,000,000</span>
+                                <span class="discounted">₩990,000<span>/회</span></span>
+                            </div>
+                        </div>
+                        <ul class="features">
+                            <li><i data-lucide="check"></i><strong>실속형 모든 항목 포함</strong></li>
+                            <li><i data-lucide="check"></i>유튜브 초기세팅+알고리즘 <span class="item-price">(₩300k → ₩150k)</span></li>
+                            <li><i data-lucide="check"></i>블로그 초기 배포 (10건) <span class="item-price">(₩200k → ₩100k)</span></li>
+                            <li><i data-lucide="check"></i>스마트 플레이스 전문 세팅 <span class="item-price">(₩200k → ₩100k)</span></li>
+                            <li><i data-lucide="check"></i>기초 운영 가이드 제공 <span class="item-price">(Free)</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-card primary">선택하기</a>
+                    </div>
+
+                    <!-- 고급형 -->
+                    <div class="price-card" data-reveal>
+                        <div class="card-header">
+                            <h3>고급형</h3>
+                            <div class="price">
+                                <span class="original">₩3,500,000</span>
+                                <span class="discounted">₩1,650,000<span>/회</span></span>
+                            </div>
+                        </div>
+                        <ul class="features">
+                            <li><i data-lucide="check"></i><strong>일반형 모든 항목 포함</strong></li>
+                            <li><i data-lucide="check"></i>블로그 스킨 (고급형 업그레이드) <span class="item-price">(₩200k → ₩100k)</span></li>
+                            <li><i data-lucide="check"></i>쓰레드 자동화 세팅 <span class="item-price">(₩100k → ₩50k)</span></li>
+                            <li><i data-lucide="check"></i>리뷰 체험단 (10인) <span class="item-price">(₩600k → ₩300k)</span></li>
+                            <li><i data-lucide="check"></i>초기 집중 관리 (1개월) <span class="item-price">(Included)</span></li>
+                        </ul>
+                        <a href="#contact" class="btn-card">선택하기</a>
+                    </div>
+
+                    <!-- 맞춤형 -->
+                    <div class="price-card special" data-reveal>
+                        <div class="card-header">
+                            <h3>맞춤형</h3>
+                            <div class="price">
+                                <span class="custom-text">별도 협의</span>
+                            </div>
+                        </div>
+                        <p class="custom-desc">대형 브랜드 및 장기 관리가 필요한 사장님을 위한 커스텀 솔루션</p>
+                        <ul class="features">
+                            <li>전담 마케터 배정</li>
+                            <li>매월 성과 리포트 제공</li>
+                            <li>광고 캠페인 운영 대행</li>
+                            <li>오프라인 인프라 연결</li>
+                        </ul>
+                        <a href="#contact" class="btn-card">문의하기</a>
+                    </div>
+                </div>
+                <div class="monthly-promo">
+                    <p>※ 월 구독형 관리도 가능합니다. (정상가 400k → <strong>특별가 200k</strong>)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <h2>실시간 맞춤 견적기</h2>
+                    <p>필요한 항목만 골라 담아보세요. 즉시 예상 견적을 확인하실 수 있습니다.</p>
+                </div>
+                <div class="calc-container" data-reveal>
+                    <div class="calc-options">
+                        <div class="calc-group">
+                            <h4>초기 구축 (선택형 패키지)</h4>
+                            <div class="select-grid-top">
+                                <div class="select-item full-width">
+                                    <label>랜딩 페이지 제작 단계</label>
+                                    <select class="calc-select">
+                                        <option value="0">선택 안 함 (₩0)</option>
+                                        <option value="200000" selected>기본형 ₩200,000 (정상가 ₩400,000)</option>
+                                        <option value="1000000">고급형 ₩1,000,000 (정상가 ₩2,000,000)</option>
+                                        <option value="2000000">마스터 프로 ₩2,000,000 (정상가 ₩4,000,000)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="check-grid">
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="50000" checked>
+                                    <div class="check-label">
+                                        홈페이지 SEO 작업 
+                                        <span class="price-wrap">
+                                            <span class="old-price">₩100,000</span>
+                                            <span class="new-price">₩50,000</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="50000" checked>
+                                    <div class="check-label">
+                                        도메인 (3년 유지) 
+                                        <span class="price-wrap">
+                                            <span class="old-price">₩100,000</span>
+                                            <span class="new-price">₩50,000</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="50000" checked>
+                                    <div class="check-label">
+                                        홈페이지형 블로그 스킨 (일반형) 
+                                        <span class="price-wrap">
+                                            <span class="old-price">₩100,000</span>
+                                            <span class="new-price">₩50,000</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="100000">
+                                    <div class="check-label">
+                                        홈페이지형 블로그 스킨 (고급형) 
+                                        <span class="price-wrap">
+                                            <span class="old-price">₩200,000</span>
+                                            <span class="new-price">₩100,000</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="150000">
+                                    <div class="check-label">
+                                        유튜브 초기세팅 + 알고리즘 작업 
+                                        <span class="price-wrap">
+                                            <span class="old-price">₩300,000</span>
+                                            <span class="new-price">₩150,000</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="50000">
+                                    <div class="check-label">
+                                        인스타그램 프로필 최적화 
+                                        <span class="price-wrap">
+                                            <span class="old-price">₩100,000</span>
+                                            <span class="new-price">₩50,000</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="50000">
+                                    <div class="check-label">
+                                        쓰레드 초기세팅 
+                                        <span class="price-wrap">
+                                            <span class="old-price">₩100,000</span>
+                                            <span class="new-price">₩50,000</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="100000">
+                                    <div class="check-label">
+                                        스마트 플레이스 초기세팅 
+                                        <span class="price-wrap">
+                                            <span class="old-price">₩200,000</span>
+                                            <span class="new-price">₩100,000</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="50000">
+                                    <div class="check-label">
+                                        디지털 명함 디자인 
+                                        <span class="price-wrap">
+                                            <span class="old-price">₩100,000</span>
+                                            <span class="new-price">₩50,000</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="100000">
+                                    <div class="check-label">
+                                        디지털 로고 디자인 
+                                        <span class="price-wrap">
+                                            <span class="old-price">₩200,000</span>
+                                            <span class="new-price">₩100,000</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="50000">
+                                    <div class="check-label">
+                                        카카오 채널 세팅 
+                                        <span class="price-wrap">
+                                            <span class="old-price">₩100,000</span>
+                                            <span class="new-price">₩50,000</span>
+                                        </span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="calc-group">
+                            <h4>제작 및 추가 옵션</h4>
+                            <div class="select-grid">
+                                <div class="select-item">
+                                    <label>홍보 숏츠 (1건 기준)</label>
+                                    <select class="calc-select">
+                                        <option value="0">선택 안 함 (₩0)</option>
+                                        <option value="200000">기본형 ₩200,000 (정상가 ₩400,000)</option>
+                                        <option value="400000">고급형 ₩400,000 (정상가 ₩800,000)</option>
+                                    </select>
+                                </div>
+                                <div class="select-item">
+                                    <label>홍보 기업 영상</label>
+                                    <select class="calc-select">
+                                        <option value="0">선택 안 함 (₩0)</option>
+                                        <option value="500000">Lite ₩500,000 (정상가 ₩1,000,000)</option>
+                                        <option value="1000000">Basic ₩1,000,000 (정상가 ₩2,000,000)</option>
+                                        <option value="3000000">Premium ₩3,000,000 (정상가 ₩6,000,000)</option>
+                                    </select>
+                                </div>
+                                <div class="select-item">
+                                    <label>CM 로고송 제작</label>
+                                    <select class="calc-select">
+                                        <option value="0">선택 안 함 (₩0)</option>
+                                        <option value="100000">Lite ₩100,000 (정상가 ₩200,000)</option>
+                                        <option value="300000">Basic ₩300,000 (정상가 ₩600,000)</option>
+                                        <option value="500000">Premium ₩500,000 (정상가 ₩1,000,000)</option>
+                                        <option value="1000000">Professional ₩1,000,000 (정상가 ₩2,000,000)</option>
+                                    </select>
+                                </div>
+                                <div class="select-item">
+                                    <label>블로그 대량 배포</label>
+                                    <select class="calc-select">
+                                        <option value="0">선택 안 함 (₩0)</option>
+                                        <option value="100000">10건 (₩100,000 / 정상가 ₩200,000)</option>
+                                        <option value="200000">20건 (₩200,000 / 정상가 ₩400,000)</option>
+                                        <option value="300000">30건 (₩300,000 / 정상가 ₩600,000)</option>
+                                    </select>
+                                </div>
+                                <div class="select-item">
+                                    <label>리뷰 체험단 (※제품제공필요)</label>
+                                    <select class="calc-select">
+                                        <option value="0">선택 안 함 (₩0)</option>
+                                        <option value="100000">10건 (₩100,000 / 정상가 ₩200,000)</option>
+                                        <option value="200000">20건 (₩200,000 / 정상가 ₩400,000)</option>
+                                    </select>
+                                </div>
+                                <div class="select-item">
+                                    <label>파워링크 광고 (월 소진 예산)</label>
+                                    <select class="calc-select">
+                                        <option value="0">선택 안 함 (₩0)</option>
+                                        <option value="100,000">₩100,000 (정상가 ₩200,000)</option>
+                                        <option value="200,000">₩200,000 (정상가 ₩400,000)</option>
+                                        <option value="300,000">₩300,000 (정상가 ₩600,000)</option>
+                                        <option value="500,000">₩500,000 (정상가 ₩1,000,000)</option>
+                                        <option value="1,000,000">₩1,000,000 (정상가 ₩2,000,000)</option>
+                                        <option value="2,000,000">₩2,000,000 (정상가 ₩4,000,000)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calc-group">
+                            <h4>프리미엄 섭외 & 커머스</h4>
+                            <div class="check-grid">
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="0">
+                                    <div class="check-label">
+                                        인플루언서 / 연예인 섭외 
+                                        <span class="price-wrap">
+                                            <span class="new-price">별도 협의</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" data-price="0">
+                                    <div class="check-label">
+                                        인플루언서 공동구매 진행 
+                                        <span class="price-wrap">
+                                            <span class="new-price">별도 협의</span>
+                                        </span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="calc-group">
+                            <h4>프리미엄 자동화 & 앱 개발</h4>
+                            <div class="select-grid">
+                                <div class="select-item">
+                                    <label>나만의 앱 만들기 (App Development)</label>
+                                    <select class="calc-select">
+                                        <option value="0">선택 안 함 (₩0)</option>
+                                        <option value="200000">Lite ₩200,000 (정상가 ₩400,000)</option>
+                                        <option value="500000">Basic ₩500,000 (정상가 ₩1,000,000)</option>
+                                        <option value="1000000">Standard ₩1,000,000 (정상가 ₩2,000,000)</option>
+                                        <option value="2000000">Premium ₩2,000,000 (정상가 ₩5,000,000)</option>
+                                    </select>
+                                </div>
+                                <div class="select-item">
+                                    <label>비즈니스 자동화 시스템 구축</label>
+                                    <select class="calc-select">
+                                        <option value="0">선택 안 함 (₩0)</option>
+                                        <option value="300000">기초 자동화 ₩300,000 (정상가 ₩600,000)</option>
+                                        <option value="1000000">통합 자동화 ₩1,000,000 (정상가 ₩2,000,000)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calc-group" id="monthly-section">
+                            <h4>월 구독형 관리 (Monthly Management)</h4>
+                            <p class="group-desc">※ 한 개 채널 운영 기준 (블로그, 유튜브, 인스타, 쓰레드 중 택1)</p>
+                            <div class="select-grid">
+                                <div class="select-item full-width">
+                                    <label>구독 등급 선택 (채널당 비용)</label>
+                                    <select class="calc-select" id="monthly-select">
+                                        <option value="0">선택 안 함 (₩0)</option>
+                                        <option value="100000">Basic ₩100,000 (정상가 ₩200,000) - 월 6회 관리</option>
+                                        <option value="200000">Standard ₩200,000 (정상가 ₩400,000) - 월 12회 관리 (추천)</option>
+                                        <option value="300000">Premium ₩300,000 (정상가 ₩600,000) - 월 18회 집중 관리</option>
+                                        <option value="500000">Professional ₩500,000 (정상가 ₩1,000,000) - 월 20+회 프리미엄 관리</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc-result" id="capture-target">
+                        <div class="result-box">
+                            <span class="result-label">총 예상 견적</span>
+                            <div class="split-costs">
+                                <div class="cost-item">
+                                    <span>초기 세팅 비용</span>
+                                    <strong id="setup-total">0</strong>
+                                </div>
+                                <div class="cost-item">
+                                    <span>월 관리 비용</span>
+                                    <strong id="monthly-total">0</strong>
+                                </div>
+                            </div>
+                            <div class="total-price">₩ <span id="calc-total">0</span></div>
+                            <p class="result-note">현재 오픈 기념 50% 프로모션 가격이 적용된 금액입니다.</p>
+                            <p class="project-note">※ 대형 프로젝트(수백/수천만)는 별도 유선 상담 필요</p>
+                            <button class="btn-screenshot" onclick="captureBudget()"><i data-lucide="camera"></i> 견적 스크린샷 저장</button>
+                            <a href="#contact" class="btn-submit">이 견적으로 상담신청</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <div class="contact-info">
+                        <h2>마케팅 고민,<br>지금 바로 해결하세요.</h2>
+                        <p>전문 상담사가 24시간 이내에 연락드립니다.</p>
+                        <div class="info-items">
+                            <div class="info-item">
+                                <i data-lucide="phone"></i>
+                                <span>1660-1195</span>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="mail"></i>
+                                <span>contact@chomapa.kr</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label>성함/업체명</label>
+                            <input type="text" placeholder="홍길동 / 초마패식당" required>
+                        </div>
+                        <div class="form-group">
+                            <label>연락처</label>
+                            <input type="tel" placeholder="010-0000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label>관심 패키지</label>
+                            <select>
+                                <option>실속형</option>
+                                <option>일반형</option>
+                                <option>고급형</option>
+                                <option>맞춤형</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>문의내용</label>
+                            <textarea placeholder="현재 고민이신 마케팅 채널이나 궁금한 점을 남겨주세요."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">상담 신청하기</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">초마패</span>
+                    <span class="logo-phone">1660-1195</span>
+                </div>
+                <p>© 2026 HAMOM CONTENTS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lucide Icons
+        lucide.createIcons();
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for Reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-reveal]').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Quotation Calculator Logic
+        const calcCheckboxes = document.querySelectorAll('.calc-options input[type="checkbox"]');
+        const calcSelects = document.querySelectorAll('.calc-select');
+        const setupDisplay = document.getElementById('setup-total');
+        const monthlyDisplay = document.getElementById('monthly-total');
+        const calcTotalDisplay = document.getElementById('calc-total');
+        const monthlySelect = document.getElementById('monthly-select');
+
+        function updateTotal() {
+            let setupTotal = 0;
+            let monthlyTotal = 0;
+
+            calcCheckboxes.forEach(cb => {
+                if (cb.checked) {
+                    setupTotal += parseInt(cb.dataset.price);
+                }
+            });
+
+            calcSelects.forEach(select => {
+                const val = parseInt(select.value);
+                if (select === monthlySelect) {
+                    monthlyTotal += val;
+                } else {
+                    setupTotal += val;
+                }
+            });
+
+            setupDisplay.innerText = setupTotal.toLocaleString();
+            monthlyDisplay.innerText = monthlyTotal.toLocaleString();
+            calcTotalDisplay.innerText = (setupTotal + monthlyTotal).toLocaleString();
+        }
+
+        calcCheckboxes.forEach(cb => {
+            cb.addEventListener('change', updateTotal);
+        });
+
+        calcSelects.forEach(select => {
+            select.addEventListener('change', updateTotal);
+        });
+
+        // Screenshot functionality
+        function captureBudget() {
+            const target = document.getElementById('capture-target');
+            html2canvas(target, {
+                backgroundColor: '#0a0c10',
+                scale: 2
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = '초마패-전적서.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        }
+
+        // Initialize total
+        updateTotal();
+
+        // Music & Lyrics Logic
+        const audio = document.getElementById('bg-audio');
+        const musicBtn = document.getElementById('music-toggle');
+        const lyricText = document.getElementById('current-lyric');
+        const visualizer = document.querySelector('.visualizer');
+        let isPlaying = false;
+
+        const lyrics = [
+            { time: 0, text: "창업의 시작, 마케팅의 길은 초마패와 함께! 🚀" },
+            { time: 5, text: "사장님은 일에만 집중하세요. 나머지는 저희가 합니다." },
+            { time: 10, text: "블로그, 유튜브, 인스타까지 완벽 구축! ✨" },
+            { time: 15, text: "오픈 기념 50% 파격 할인 - 지금이 기회입니다." },
+            { time: 20, text: "가장 효율적인 마케팅 봇물, 초마패가 터뜨립니다! 🔥" },
+            { time: 25, text: "디지털 명함부터 로고, 고퀄리티 영상까지 한 번에!" },
+            { time: 30, text: "당신의 성공 파트너, 프리미엄 에이전시 초마패! 🏆" }
+        ];
+
+        musicBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+                visualizer.classList.remove('active');
+                document.querySelector('.music-label').innerText = "BGM OFF";
+            } else {
+                audio.play();
+                visualizer.classList.add('active');
+                document.querySelector('.music-label').innerText = "BGM ON";
+            }
+            isPlaying = !isPlaying;
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            const currentLyric = lyrics.reduce((prev, curr) => {
+                if (currentTime >= curr.time) {
+                    return curr.text;
+                }
+                return prev;
+            }, lyrics[0].text);
+            
+            if (lyricText.innerText !== currentLyric) {
+                lyricText.style.opacity = 0;
+                setTimeout(() => {
+                    lyricText.innerText = currentLyric;
+                    lyricText.style.opacity = 1;
+                }, 300);
+            }
+        });
+
+        // Try auto-play on first interaction
+        document.addEventListener('click', () => {
+            if (!isPlaying && audio.paused) {
+                // optional: auto-start removed to comply with browser policies 
+                // and user control preference, but can be forced here if desired
+            }
+        }, { once: true });
+    </script>
+</body>
+</html>
