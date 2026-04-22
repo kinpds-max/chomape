@@ -315,11 +315,9 @@ nav {
     margin-bottom: 1.5rem;
     letter-spacing: -2px;
     min-height: 2.2em; /* Restored for 2 lines */
-    display: flex;
-    flex-direction: column; /* Vertical flow restored */
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem; /* More space between lines */
+    text-align: center;
+    white-space: pre-wrap; /* Allows <br> to work while keeping words together */
+    word-break: keep-all; 
     line-height: 1.3;
 }
 
