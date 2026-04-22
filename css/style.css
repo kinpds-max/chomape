@@ -314,13 +314,12 @@ nav {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -2px;
-    min-height: 1.2em; /* Adjusted for single line */
+    min-height: 2.2em; /* Restored for 2 lines */
     display: flex;
-    flex-direction: row; /* Horizontal flow */
+    flex-direction: column; /* Vertical flow restored */
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
-    white-space: nowrap; /* Keep it on one line as requested */
+    gap: 0.2rem;
 }
 
 .highlight {
@@ -1427,13 +1426,14 @@ footer {
     display: inline-block;
     background: rgba(0, 229, 255, 0.1);
     color: var(--primary);
-    padding: 1rem 2rem;
-    border-radius: 20px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
-    border: 1px solid rgba(0, 229, 255, 0.3);
-    line-height: 1.6;
+    padding: 2rem 4rem; /* Larger padding */
+    border-radius: 30px;
+    font-size: 2.2rem; /* Upscaled ~200% */
+    font-weight: 800;
+    margin-bottom: 4rem; /* More space */
+    border: 2px solid rgba(0, 229, 255, 0.3);
+    line-height: 1.4;
+    text-align: center;
 }
 
 .kakao-float {
@@ -1467,3 +1467,5 @@ footer {
     width: 35px;
     height: 35px;
 }
+@ m e d i a   ( m a x - w i d t h :   7 6 8 p x )   {   . h e a d e r - n o t e   {   f o n t - s i z e :   1 . 2 r e m ;   p a d d i n g :   1 r e m   1 . 5 r e m ;   }   }  
+ 
