@@ -717,19 +717,24 @@ section {
 }
 
 .features li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.8rem;
+    display: block; /* Safer for multi-line/sub-prices */
     margin-bottom: 1.2rem;
     color: var(--text-muted);
     font-size: 0.9rem;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .features li i {
-    width: 18px;
-    height: 18px;
     color: var(--primary);
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.sub-price {
+    font-size: 0.8rem;
+    color: var(--accent); /* Yellow */
+    margin-left: 4px;
+    font-weight: 500;
 }
 
 .item-price {
