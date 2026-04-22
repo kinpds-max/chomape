@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>초마패 - 초기 마케팅 패키지 | 오픈기념 50% 할인</title>
+    <!-- Security Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="X-Content-Type-Options" content="nosniff">
+    <meta name="X-Frame-Options" content="DENY">
+    
+    <title>초마패 - 초기 마케팅 패키지 | 비즈니스의 시작을 완벽하게</title>
     <meta name="description" content="사장님은 일만 하세요, 마케팅은 초마패가 해결합니다. 블로그, 유튜브, 인스타그램 등 초기 마케팅의 모든 것. 오픈 기념 50% 파격 할인 중!">
     <meta name="naver-site-verification" content="4b027d57de228dd468d248601a64140f33c47786" />
     <link rel="stylesheet" href="css/style.css">
@@ -997,6 +1002,14 @@
             heroTilt.style.transform = `rotateY(0deg) rotateX(0deg)`;
         });
         window.addEventListener('load', () => setTimeout(typeEffect, 1000));
+        // Security Logic (Prevent Inspection)
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.onkeydown = function(e) {
+            if (e.keyCode == 123) return false; // F12
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+        };
     </script>
     <a href="https://pf.kakao.com/_qxgvUxb" class="kakao-float" target="_blank" title="하맘컨텐츠 카카오톡 상담">
         <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fe3%2FKakaoTalk_logo.svg%2F1200px-KakaoTalk_logo.svg.png&type=f240_240" alt="KakaoTalk">
