@@ -315,7 +315,8 @@ nav {
     margin-bottom: 1.5rem;
     letter-spacing: -2px;
     min-height: 2.2em; /* Restored for 2 lines */
-    text-align: center;
+    display: inline-block; /* Centered container, left-aligned text */
+    text-align: left;
     white-space: pre-wrap; /* Allows <br> to work while keeping words together */
     word-break: keep-all; 
     line-height: 1.3;
