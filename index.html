@@ -74,7 +74,7 @@
                 <div class="bubble bubble-3"></div>
             </div>
             <div class="hero-overlay"></div>
-            <div class="hero-content">
+            <div class="hero-content left-align">
                 <div class="badge fade-in">GRAND OPENING 50% OFF</div>
                 <h1 class="hero-title" id="typing-title"></h1>
                 <p class="hero-subtitle" data-reveal>대한민국의 모든 사장님(사원님)들을 위해,<br>가장 효율적인 일등 마케팅 파트너가 되어드리겠습니다.</p>
@@ -921,7 +921,7 @@
 
         // Typing Effect
         const typingTitle = document.getElementById('typing-title');
-        const typingContent = "창업지원에 <span class='highlight'>'초창패'</span>가 있다면<br>마케팅에는 <span class='highlight'>'초마패'</span>가 있다";
+        const typingContent = "창업지원에 <span class='highlight'>'초창패'</span><span class='brand-sub'>(초기창업패키지)</span><br>마케팅에는 <span class='highlight'>'초마패'</span><span class='brand-sub'>(초기마케팅패키지)</span>";
         let typingIndex = 0;
         function typeEffect() {
             if (typingIndex < typingContent.length) {
@@ -933,7 +933,7 @@
                     typingTitle.innerHTML = typingContent.substring(0, typingIndex + 1);
                     typingIndex++;
                 }
-                setTimeout(typeEffect, 100);
+                setTimeout(typeEffect, 80);
             }
         }
         window.addEventListener('load', () => setTimeout(typeEffect, 1000));

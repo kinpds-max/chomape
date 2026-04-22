@@ -1382,3 +1382,26 @@ footer {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
+
+.hero-content.left-align {
+    text-align: left;
+    margin-left: 5%;
+    max-width: 1000px;
+}
+
+.hero-content.left-align .hero-title {
+    text-align: left;
+}
+
+.brand-sub {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-top: 0.5rem;
+    letter-spacing: 0;
+}
+
+.hero-btns {
+    justify-content: flex-start !important;
+}
