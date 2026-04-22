@@ -1405,3 +1405,47 @@ footer {
 .hero-btns {
     justify-content: flex-start !important;
 }
+
+.header-note {
+    display: inline-block;
+    background: rgba(0, 229, 255, 0.1);
+    color: var(--primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+}
+
+.kakao-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    background: #FEE500;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: var(--transition);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.kakao-float:hover {
+    transform: scale(1.1) translateY(-5px) !important;
+    background: #FFD600;
+}
+
+.kakao-float img {
+    width: 35px;
+    height: 35px;
+}
