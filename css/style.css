@@ -213,6 +213,7 @@ nav {
     justify-content: center;
     overflow: hidden;
     background: #080a12;
+    perspective: 1000px;
 }
 
 /* Animated Friendly Background */
@@ -282,6 +283,9 @@ nav {
 .hero-content {
     max-width: 900px;
     z-index: 3;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
 }
 
 .badge {
@@ -310,6 +314,11 @@ nav {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -2px;
+    min-height: 2.2em; /* Keep layout stable during typing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .highlight {
@@ -1389,11 +1398,6 @@ footer {
     50% { opacity: 0; }
 }
 
-.hero-content.left-align {
-    text-align: left;
-    margin-left: 5%;
-    max-width: 1000px;
-}
 
 .hero-content.left-align .hero-title {
     text-align: left;

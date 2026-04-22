@@ -74,7 +74,7 @@
                 <div class="bubble bubble-3"></div>
             </div>
             <div class="hero-overlay"></div>
-            <div class="hero-content left-align">
+            <div class="hero-content" id="hero-tilt">
                 <div class="badge fade-in">GRAND OPENING 50% OFF</div>
                 <h1 class="hero-title" id="typing-title"></h1>
                 <p class="hero-subtitle" data-reveal>대한민국의 모든 사장님(사원님)들을 위해,<br>가장 효율적인 일등 마케팅 파트너가 되어드리겠습니다.</p>
@@ -994,6 +994,23 @@
                 setTimeout(typeEffect, 80);
             }
         }
+        
+        // 3D Tilt Effect
+        const heroTilt = document.getElementById('hero-tilt');
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            const moveX = (x - 0.5) * 20; // Max 10 deg
+            const moveY = (y - 0.5) * -20;
+            
+            heroTilt.style.transform = `rotateY(${moveX}deg) rotateX(${moveY}deg)`;
+        });
+        
+        // Reset tilt on mouse leave
+        document.addEventListener('mouseleave', () => {
+            heroTilt.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        });
         window.addEventListener('load', () => setTimeout(typeEffect, 1000));
     </script>
     <a href="https://pf.kakao.com/_qxgvUxb" class="kakao-float" target="_blank" title="하맘컨텐츠 카카오톡 상담">
