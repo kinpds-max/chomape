@@ -1365,3 +1365,20 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.hero-title {
+    min-height: 2.3em;
+}
+
+.hero-title::after {
+    content: '|';
+    animation: blink 0.8s infinite;
+    margin-left: 2px;
+    color: var(--primary);
+    vertical-align: baseline;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

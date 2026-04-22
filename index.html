@@ -76,8 +76,7 @@
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="badge fade-in">GRAND OPENING 50% OFF</div>
-                <h1 class="hero-title" data-reveal>창업지원에 <span class="highlight">'초창패'</span>가 있다면<br>마케팅에는 <span
-                        class="highlight">'초마패'</span>가 있다</h1>
+                <h1 class="hero-title" id="typing-title"></h1>
                 <p class="hero-subtitle" data-reveal>대한민국의 모든 사장님(사원님)들을 위해,<br>가장 효율적인 일등 마케팅 파트너가 되어드리겠습니다.</p>
                 <div class="hero-btns" data-reveal>
                     <a href="#pricing" class="btn-main">패키지 확인하기</a>
@@ -902,6 +901,25 @@
         ['click', 'touchstart', 'mousemove', 'scroll'].forEach(event => {
             document.addEventListener(event, startAudio, { once: true });
         });
+
+        // Typing Effect
+        const typingTitle = document.getElementById('typing-title');
+        const typingContent = "창업지원에 <span class='highlight'>'초창패'</span>가 있다면<br>마케팅에는 <span class='highlight'>'초마패'</span>가 있다";
+        let typingIndex = 0;
+        function typeEffect() {
+            if (typingIndex < typingContent.length) {
+                if (typingContent[typingIndex] === '<') {
+                    const tagEnd = typingContent.indexOf('>', typingIndex);
+                    typingTitle.innerHTML = typingContent.substring(0, tagEnd + 1);
+                    typingIndex = tagEnd + 1;
+                } else {
+                    typingTitle.innerHTML = typingContent.substring(0, typingIndex + 1);
+                    typingIndex++;
+                }
+                setTimeout(typeEffect, 100);
+            }
+        }
+        window.addEventListener('load', () => setTimeout(typeEffect, 1000));
     </script>
 </body>
 
