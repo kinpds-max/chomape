@@ -624,6 +624,10 @@ section {
     align-items: stretch;
 }
 
+.promo-grid .discounted {
+    font-size: 1.6rem; /* Scaled down to fit better */
+}
+
 .price-card.special-monthly {
     border: 2px solid var(--monthly);
     background: linear-gradient(180deg, #161a22 0%, rgba(255, 143, 0, 0.05) 100%);
@@ -709,10 +713,11 @@ section {
     white-space: nowrap;
 }
 
-.discounted small {
-    font-size: 1rem;
-    color: var(--text-muted);
-    margin-left: 5px;
+.discounted small,
+.discounted span {
+    font-size: 0.9rem;
+    color: var(--text-muted); /* Not yellow */
+    margin-left: 2px;
     font-weight: 500;
 }
 
