@@ -716,7 +716,7 @@ section {
 .discounted small,
 .discounted span {
     font-size: 0.9rem;
-    color: var(--text-muted); /* Not yellow */
+    color: #a0a6b1 !important; /* Muted gray-blue, non-yellow */
     margin-left: 2px;
     font-weight: 500;
 }
