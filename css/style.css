@@ -229,7 +229,7 @@ nav {
     position: absolute;
     border-radius: 50%;
     filter: blur(80px);
-    opacity: 0.4;
+    opacity: 0.5;
     animation: bubbleFloat 20s infinite alternate ease-in-out;
 }
 
@@ -256,7 +256,7 @@ nav {
     background: #00ff88;
     top: 40%;
     left: 60%;
-    opacity: 0.2;
+    opacity: 0.3;
     animation-delay: -10s;
 }
 
