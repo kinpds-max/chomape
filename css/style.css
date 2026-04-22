@@ -669,9 +669,15 @@ section {
     font-weight: 800;
 }
 
+.card-header {
+    min-height: 120px; /* Fixed height for title & price alignment */
+    display: flex;
+    flex-direction: column;
+}
+
 .card-header h3 {
-    font-size: 1.35rem; /* Reduced to fit in 4-column row */
-    margin-bottom: 1.5rem;
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
