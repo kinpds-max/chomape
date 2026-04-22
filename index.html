@@ -52,7 +52,18 @@
                 <li><a href="#pricing">요금 안내</a></li>
                 <li><a href="#contact" class="btn-primary">상담 신청</a></li>
             </ul>
+            <button class="mobile-menu-toggle" aria-label="메뉴 열기">
+                <i data-lucide="menu"></i>
+            </button>
         </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="#about">브랜드 스토리</a></li>
+                <li><a href="#services">제공 서비스</a></li>
+                <li><a href="#pricing">요금 안내</a></li>
+                <li><a href="#contact">상담 신청</a></li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -179,8 +190,8 @@
                         <div class="card-header">
                             <h3>일반형</h3>
                             <div class="price">
-                                <span class="original">₩2,000,000</span>
-                                <span class="discounted">₩1,000,000<span>/회</span></span>
+                                <span class="original">₩1,000,000</span>
+                                <span class="discounted">₩500,000<span>/회</span></span>
                             </div>
                         </div>
                         <ul class="features">
@@ -220,16 +231,97 @@
                         </div>
                         <p class="custom-desc">대형 브랜드 및 장기 관리가 필요한 사장님을 위한 커스텀 솔루션</p>
                         <ul class="features">
-                            <li>전담 마케터 배정</li>
-                            <li>매월 성과 리포트 제공</li>
-                            <li>광고 캠페인 운영 대행</li>
-                            <li>오프라인 인프라 연결</li>
+                            <li><i data-lucide="check"></i>전담 마케터 배정</li>
+                            <li><i data-lucide="check"></i>매월 성과 리포트 제공</li>
+                            <li><i data-lucide="check"></i>광고 캠페인 운영 대행</li>
+                            <li><i data-lucide="check"></i>오프라인 인프라 연결</li>
                         </ul>
                         <a href="#contact" class="btn-card">문의하기</a>
                     </div>
                 </div>
-                <div class="monthly-promo">
-                    <p>※ 월 구독형 관리도 가능합니다. (정상가 400k → <strong>특별가 200k</strong>)</p>
+
+                <div class="section-header" style="margin-top: 80px;" data-reveal>
+                    <h2>정기 관리 및 홍보 서비스</h2>
+                    <p>지속적인 유입과 브랜딩을 위한 고효율 솔루션입니다.</p>
+                </div>
+
+                <div class="price-grid promo-grid">
+                    <!-- 월 구독형 -->
+                    <div class="price-card special-monthly" data-reveal>
+                        <div class="special-tag">MOST POPULAR</div>
+                        <div class="card-header">
+                            <h3>월 구독형 관리</h3>
+                            <div class="price">
+                                <span class="original">₩600,000</span>
+                                <span class="discounted">₩300,000<span>/월</span></span>
+                            </div>
+                        </div>
+                        <p class="custom-desc">지속적인 활성화를 위한 채널 관리 (블로그, 인스타, 쓰레드, 유튜브 중 택1 또는 <strong>맞춤 배분 가능</strong>)</p>
+                        <ul class="features">
+                            <li><i data-lucide="check"></i>월 10회 정기 포스팅/관리</li>
+                            <li><i data-lucide="check"></i>채널 최적화 및 상위 노출 관리</li>
+                            <li><i data-lucide="check"></i>트렌드 기반 콘텐츠 기획</li>
+                            <li><i data-lucide="check"></i>월간 성과 분석 리포트</li>
+                        </ul>
+                        <a href="#contact" class="btn-card primary" style="background: var(--monthly) !important; color: white !important;">구독 신청하기</a>
+                    </div>
+
+                    <!-- 블로그 대량 배포 -->
+                    <div class="price-card" data-reveal>
+                        <div class="card-header">
+                            <h3>블로그 대량 배포</h3>
+                            <div class="price">
+                                <span class="original">₩200,000</span>
+                                <span class="discounted">₩100,000<span>/10건</span></span>
+                            </div>
+                        </div>
+                        <p class="custom-desc">빠른 정보 확산과 브랜드 노출 극대화를 위한 최적의 수량</p>
+                        <ul class="features">
+                            <li><i data-lucide="check"></i>고퀄리티 원고 작성 포함</li>
+                            <li><i data-lucide="check"></i>동시 다발적 정보 확산</li>
+                            <li><i data-lucide="check"></i>원하는 키워드 타겟팅</li>
+                            <li><i data-lucide="check"></i>배포 결과 보고서 제공</li>
+                        </ul>
+                        <a href="#contact" class="btn-card">상담 신청</a>
+                    </div>
+
+                    <!-- 리뷰 체험단 -->
+                    <div class="price-card" data-reveal>
+                        <div class="card-header">
+                            <h3>리뷰 체험단</h3>
+                            <div class="price">
+                                <span class="original">₩200,000</span>
+                                <span class="discounted">₩100,000<span>/10인</span></span>
+                            </div>
+                        </div>
+                        <p class="custom-desc">실제 이용 고객의 생생한 후기로 소비자 신뢰도 확보</p>
+                        <ul class="features">
+                            <li><i data-lucide="check"></i>최적화 블로거 선별</li>
+                            <li><i data-lucide="check"></i>가이드라인 밀착 관리</li>
+                            <li><i data-lucide="check"></i>생생한 사진/영상 후기</li>
+                            <li><i data-lucide="check"></i>체험단 모집 및 결과 리포트</li>
+                        </ul>
+                        <a href="#contact" class="btn-card">상담 신청</a>
+                    </div>
+
+                    <!-- 파워링크 광고 -->
+                    <div class="price-card" data-reveal>
+                        <div class="card-header">
+                            <h3>파워링크 광고</h3>
+                            <div class="price">
+                                <span class="original">₩200,000</span>
+                                <span class="discounted">₩100,000<span>/월</span></span>
+                            </div>
+                        </div>
+                        <p class="custom-desc">검색 결과 최상단 노출로 즉각적인 유입과 매출 견인</p>
+                        <ul class="features">
+                            <li><i data-lucide="check"></i>광고 계정 무료 세팅</li>
+                            <li><i data-lucide="check"></i>고효율 키워드 발굴</li>
+                            <li><i data-lucide="check"></i>ROAS 극대화 세팅</li>
+                            <li><i data-lucide="check"></i>실시간 입찰가 최적화</li>
+                        </ul>
+                        <a href="#contact" class="btn-card">상담 신청</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -243,14 +335,14 @@
                 <div class="calc-container" data-reveal>
                     <div class="calc-options">
                         <div class="calc-group">
-                            <h4>초기 구축 (선택형 패키지)</h4>
+                            <h4>초기 구축</h4>
                             <div class="select-grid-top">
                                 <div class="select-item full-width">
                                     <label>랜딩 페이지 제작 단계</label>
                                     <select class="calc-select">
                                         <option value="0">선택 안 함 (₩0)</option>
                                         <option value="200000" selected>기본형 ₩200,000 (정상가 ₩400,000)</option>
-                                        <option value="1000000">고급형 ₩1,000,000 (정상가 ₩2,000,000)</option>
+                                        <option value="500000">일반형 ₩500,000 (정상가 ₩1,000,000)</option>
                                         <option value="2000000">마스터 프로 ₩2,000,000 (정상가 ₩4,000,000)</option>
                                     </select>
                                 </div>
@@ -269,7 +361,7 @@
                                 <label class="check-item">
                                     <input type="checkbox" data-price="50000" checked>
                                     <div class="check-label">
-                                        도메인 (3년 유지)
+                                        도메인
                                         <span class="price-wrap">
                                             <span class="old-price">₩100,000</span>
                                             <span class="new-price">₩50,000</span>
@@ -279,7 +371,7 @@
                                 <label class="check-item">
                                     <input type="checkbox" data-price="50000" checked>
                                     <div class="check-label">
-                                        홈페이지형 블로그 스킨 (일반형)
+                                        홈페이지형 블로그 스킨 일반형
                                         <span class="price-wrap">
                                             <span class="old-price">₩100,000</span>
                                             <span class="new-price">₩50,000</span>
@@ -289,7 +381,7 @@
                                 <label class="check-item">
                                     <input type="checkbox" data-price="100000">
                                     <div class="check-label">
-                                        홈페이지형 블로그 스킨 (고급형)
+                                        홈페이지형 블로그 스킨 고급형
                                         <span class="price-wrap">
                                             <span class="old-price">₩200,000</span>
                                             <span class="new-price">₩100,000</span>
@@ -347,6 +439,16 @@
                                     </div>
                                 </label>
                                 <label class="check-item">
+                                    <input type="checkbox" data-price="50000">
+                                    <div class="check-label">
+                                        디지털 배너 디자인
+                                        <span class="price-wrap">
+                                            <span class="old-price">₩100,000</span>
+                                            <span class="new-price">₩50,000</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="check-item">
                                     <input type="checkbox" data-price="100000">
                                     <div class="check-label">
                                         디지털 로고 디자인
@@ -372,20 +474,20 @@
                             <h4>제작 및 추가 옵션</h4>
                             <div class="select-grid">
                                 <div class="select-item">
-                                    <label>홍보 숏츠 (1건 기준)</label>
+                                    <label>홍보 숏츠</label>
                                     <select class="calc-select">
                                         <option value="0">선택 안 함 (₩0)</option>
-                                        <option value="200000">기본형 ₩200,000 (정상가 ₩400,000)</option>
-                                        <option value="400000">고급형 ₩400,000 (정상가 ₩800,000)</option>
+                                        <option value="30000">기본형 ₩30,000 (정상가 ₩200,000)</option>
+                                        <option value="100000">고급형 ₩100,000 (정상가 ₩500,000)</option>
                                     </select>
                                 </div>
                                 <div class="select-item">
                                     <label>홍보 기업 영상</label>
                                     <select class="calc-select">
                                         <option value="0">선택 안 함 (₩0)</option>
-                                        <option value="500000">Lite ₩500,000 (정상가 ₩1,000,000)</option>
-                                        <option value="1000000">Basic ₩1,000,000 (정상가 ₩2,000,000)</option>
-                                        <option value="3000000">Premium ₩3,000,000 (정상가 ₩6,000,000)</option>
+                                        <option value="200000">기본형 (Lite) ₩200,000 (정상가 ₩400,000)</option>
+                                        <option value="500000">고급형 (Basic) ₩500,000 (정상가 ₩1,000,000)</option>
+                                        <option value="1500000">Premium ₩1,500,000 (정상가 ₩3,000,000)</option>
                                     </select>
                                 </div>
                                 <div class="select-item">
@@ -408,7 +510,7 @@
                                     </select>
                                 </div>
                                 <div class="select-item">
-                                    <label>리뷰 체험단 (※제품제공필요)</label>
+                                    <label>리뷰 체험단</label>
                                     <select class="calc-select">
                                         <option value="0">선택 안 함 (₩0)</option>
                                         <option value="100000">10건 (₩100,000 / 정상가 ₩200,000)</option>
@@ -416,15 +518,15 @@
                                     </select>
                                 </div>
                                 <div class="select-item">
-                                    <label>파워링크 광고 (월 소진 예산)</label>
+                                    <label>파워링크 광고</label>
                                     <select class="calc-select">
                                         <option value="0">선택 안 함 (₩0)</option>
-                                        <option value="100,000">₩100,000 (정상가 ₩200,000)</option>
-                                        <option value="200,000">₩200,000 (정상가 ₩400,000)</option>
-                                        <option value="300,000">₩300,000 (정상가 ₩600,000)</option>
-                                        <option value="500,000">₩500,000 (정상가 ₩1,000,000)</option>
-                                        <option value="1,000,000">₩1,000,000 (정상가 ₩2,000,000)</option>
-                                        <option value="2,000,000">₩2,000,000 (정상가 ₩4,000,000)</option>
+                                        <option value="100000">₩100,000 (정상가 ₩200,000)</option>
+                                        <option value="200000">₩200,000 (정상가 ₩400,000)</option>
+                                        <option value="300000">₩300,000 (정상가 ₩600,000)</option>
+                                        <option value="500000">₩500,000 (정상가 ₩1,000,000)</option>
+                                        <option value="1000000">₩1,000,000 (정상가 ₩2,000,000)</option>
+                                        <option value="2000000">₩2,000,000 (정상가 ₩4,000,000)</option>
                                     </select>
                                 </div>
                             </div>
@@ -458,7 +560,7 @@
                             <h4>프리미엄 자동화 & 앱 개발</h4>
                             <div class="select-grid">
                                 <div class="select-item">
-                                    <label>나만의 앱 만들기 (App Development)</label>
+                                    <label>나만의 앱 만들기</label>
                                     <select class="calc-select">
                                         <option value="0">선택 안 함 (₩0)</option>
                                         <option value="200000">Lite ₩200,000 (정상가 ₩400,000)</option>
@@ -483,19 +585,18 @@
                             </div>
                         </div>
 
-                        <div class="calc-group" id="monthly-section">
-                            <h4>월 구독형 관리 (Monthly Management)</h4>
-                            <p class="group-desc">※ 한 개 채널 운영 기준 (블로그, 유튜브, 인스타, 쓰레드 중 택1)</p>
+                        <div class="calc-group group-monthly" id="monthly-section">
+                            <h4>월 구독형 및 정기 홍보</h4>
+                            <p class="group-desc">지속적인 유입과 브랜딩을 위한 정기 관리 솔루션</p>
                             <div class="select-grid">
                                 <div class="select-item full-width">
-                                    <label>구독 등급 선택 (채널당 비용)</label>
+                                    <label>구독 등급 선택</label>
                                     <select class="calc-select" id="monthly-select">
                                         <option value="0">선택 안 함 (₩0)</option>
-                                        <option value="100000">Basic ₩100,000 (정상가 ₩200,000) - 월 6회 관리</option>
-                                        <option value="200000">Standard ₩200,000 (정상가 ₩400,000) - 월 12회 관리 (추천)</option>
-                                        <option value="300000">Premium ₩300,000 (정상가 ₩600,000) - 월 18회 집중 관리</option>
-                                        <option value="500000">Professional ₩500,000 (정상가 ₩1,000,000) - 월 20+회 프리미엄 관리
-                                        </option>
+                                        <option value="150000">Basic ₩150,000 (정상가 ₩300,000) - 월 5회 관리</option>
+                                        <option value="300000" selected>Standard ₩300,000 (정상가 ₩600,000) - 월 10회 관리 (추천)</option>
+                                        <option value="600000">Premium ₩600,000 (정상가 ₩1,200,000) - 월 20회 집중 관리</option>
+                                        <option value="900000">Professional ₩900,000 (정상가 ₩1,800,000) - 월 30회 통합 관리</option>
                                     </select>
                                 </div>
                             </div>
@@ -588,16 +689,27 @@
         // Lucide Icons
         lucide.createIcons();
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuToggle.querySelector('i').setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
             });
         });
 
