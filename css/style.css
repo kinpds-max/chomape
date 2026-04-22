@@ -677,15 +677,20 @@ section {
 }
 
 .discounted {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--accent);
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--monthly);
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    white-space: nowrap;
 }
 
-.discounted span {
-    font-size: 0.9rem;
-    font-weight: 400;
+.discounted small {
+    font-size: 1rem;
     color: var(--text-muted);
+    margin-left: 5px;
+    font-weight: 500;
 }
 
 .custom-text {
@@ -702,11 +707,12 @@ section {
 
 .features li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .features li i {
