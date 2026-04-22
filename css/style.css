@@ -1286,3 +1286,22 @@ footer {
         max-width: none;
     }
 }
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    background: var(--primary);
+    color: var(--bg-dark);
+    border-radius: 15px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none !important;
+    margin-top: 1.5rem;
+    transition: var(--transition);
+}
+
+.btn-submit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 229, 255, 0.4);
+}
