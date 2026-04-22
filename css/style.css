@@ -284,6 +284,10 @@ nav {
     max-width: 900px;
     z-index: 3;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transform-style: preserve-3d;
     transition: transform 0.1s ease-out;
 }
@@ -315,8 +319,7 @@ nav {
     margin-bottom: 1.5rem;
     letter-spacing: -2px;
     min-height: 2.2em; /* Restored for 2 lines */
-    display: inline-block; /* Centered container, left-aligned text */
-    text-align: left;
+    text-align: center; /* Back to center as requested */
     white-space: pre-wrap; /* Allows <br> to work while keeping words together */
     word-break: keep-all; 
     line-height: 1.3;
