@@ -643,7 +643,7 @@ section {
 .price-card {
     background: var(--bg-card);
     border-radius: 24px;
-    padding: 2.5rem 1.5rem;
+    padding: 3rem 1.5rem 2.5rem; /* Increased top padding to avoid overlap */
     border: 1px solid var(--glass-border);
     position: relative;
     display: flex;
@@ -689,9 +689,9 @@ section {
 
 .discounted {
     display: block;
-    font-size: 2.2rem;
+    font-size: 2rem; /* Slightly reduced for better fit */
     font-weight: 900;
-    color: var(--monthly);
+    color: var(--accent); /* Yellow as requested */
     line-height: 1.2;
     letter-spacing: -0.05em;
     white-space: nowrap;
