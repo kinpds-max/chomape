@@ -238,10 +238,17 @@
             <div class="container">
                 <div class="section-header" data-reveal>
                     <p class="header-note">견적 복잡하시면 "우리 업종 알아서 추천 해주세요"<br><span class="highlight">맞춤컨설팅 제안해드립니다</span></p>
-                    <h2>추천 초기세팅패키지</h2>
-                    <p>비즈니스 규모와 목적에 맞는 최적의 플랜을 선택하세요.</p>
+                    <h2>패키지 안내</h2>
+                    <p>비즈니스 단계에 맞는 최적의 마케팅 솔루션을 확인하세요.</p>
                 </div>
-                <div class="price-grid">
+
+                <div class="pricing-tabs" data-reveal>
+                    <button class="tab-btn active" onclick="showPriceTab('setup')">초기 구축 패키지</button>
+                    <button class="tab-btn" onclick="showPriceTab('promo')">정기 관리 및 홍보</button>
+                </div>
+
+                <div id="price-tab-setup" class="price-tab-content active">
+                    <div class="price-grid">
                     <!-- 라이트 -->
                     <div class="price-card" data-reveal>
                         <div class="card-header">
@@ -328,14 +335,11 @@
                         </ul>
                         <a href="#contact" class="btn-card">문의하기</a>
                     </div>
+                    </div>
                 </div>
 
-                <div class="section-header" style="margin-top: 80px;" data-reveal>
-                    <h2>추천 정기 관리 및 홍보 서비스</h2>
-                    <p>지속적인 유입과 브랜딩을 위한 고효율 솔루션입니다.</p>
-                </div>
-
-                <div class="price-grid promo-grid">
+                <div id="price-tab-promo" class="price-tab-content">
+                    <div class="price-grid promo-grid">
                     <!-- 월 구독형 -->
                     <div class="price-card special-monthly" data-reveal>
                         <div class="special-tag">MOST POPULAR</div>
@@ -430,6 +434,7 @@
                     </div>
 
                     <!-- 홍보 숏츠 삭제됨 -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -1051,6 +1056,24 @@
         });
 
         window.addEventListener('load', checkPopup);
+
+        // Pricing Tab Logic
+        function showPriceTab(tabId) {
+            document.querySelectorAll('.price-tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.pricing-tabs .tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            document.getElementById(`price-tab-${tabId}`).classList.add('active');
+            event.currentTarget.classList.add('active');
+            
+            // Refresh reveals for the new tab
+            document.querySelectorAll(`#price-tab-${tabId} [data-reveal]`).forEach(el => {
+                el.classList.add('active');
+            });
+        }
 
         // Security Logic (Prevent Inspection)
         document.addEventListener('contextmenu', e => e.preventDefault());
