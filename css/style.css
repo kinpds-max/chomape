@@ -1630,9 +1630,38 @@ footer {
     background: rgba(255, 255, 255, 0.1);
 }
 
+/* Custom Scrollbar for Popup */
+.popup-image-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.popup-image-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.popup-image-container::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
 @media (max-width: 480px) {
     .popup-content {
-        max-width: 95%;
-        max-height: 80vh;
+        width: 92%;
+        max-width: none;
+        max-height: 90vh;
+        border-radius: 20px;
+    }
+    
+    .popup-footer {
+        padding: 10px 15px;
+    }
+    
+    .popup-footer label {
+        font-size: 0.75rem;
+    }
+    
+    .btn-popup-close {
+        padding: 5px 12px;
+        font-size: 0.75rem;
     }
 }
