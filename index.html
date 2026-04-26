@@ -801,17 +801,23 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-text">초마패</span>
-                    <span class="logo-phone">1660-1195</span>
-                </div>
-                <p>© 2026 HAMOM CONTENTS. All rights reserved.</p>
+    </footer>
+    
+    <!-- Promotion Popup -->
+    <div id="ad-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button id="close-popup" class="popup-close-btn" aria-label="Close popup">&times;</button>
+            <div class="popup-image-container">
+                <img src="images/popup.jpg" alt="특별 프로모션">
+            </div>
+            <div class="popup-footer">
+                <label>
+                    <input type="checkbox" id="dont-show-today"> 오늘 하루 보지 않기
+                </label>
+                <button id="close-popup-bottom" class="btn-popup-close">닫기</button>
             </div>
         </div>
-    </footer>
+    </div>
 
     <script>
         // Lucide Icons
@@ -1008,11 +1014,44 @@
             heroTilt.style.transform = `rotateY(${moveX}deg) rotateX(${moveY}deg)`;
         });
         
-        // Reset tilt on mouse leave
+        // reset tilt on mouse leave
         document.addEventListener('mouseleave', () => {
             heroTilt.style.transform = `rotateY(0deg) rotateX(0deg)`;
         });
         window.addEventListener('load', () => setTimeout(typeEffect, 1000));
+
+        // Popup Logic
+        const popup = document.getElementById('ad-popup');
+        const closePopupBtn = document.getElementById('close-popup');
+        const closePopupBottom = document.getElementById('close-popup-bottom');
+        const dontShowCheckbox = document.getElementById('dont-show-today');
+
+        function checkPopup() {
+            const hideTime = localStorage.getItem('hidePromoPopup');
+            const now = new Date().getTime();
+            
+            if (!hideTime || (now - hideTime > 24 * 60 * 60 * 1000)) {
+                setTimeout(() => {
+                    popup.classList.add('active');
+                }, 1500);
+            }
+        }
+
+        function closePopup() {
+            popup.classList.remove('active');
+            if (dontShowCheckbox.checked) {
+                localStorage.setItem('hidePromoPopup', new Date().getTime());
+            }
+        }
+
+        closePopupBtn.addEventListener('click', closePopup);
+        closePopupBottom.addEventListener('click', closePopup);
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) closePopup();
+        });
+
+        window.addEventListener('load', checkPopup);
+
         // Security Logic (Prevent Inspection)
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.onkeydown = function(e) {
