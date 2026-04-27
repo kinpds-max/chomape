@@ -1844,16 +1844,111 @@ footer {
     }
 }
 
+/* ── 모바일 섹션 네비게이션 ─────────────────── */
+#mobile-section-nav {
+    display: none;
+}
+
 @media (max-width: 768px) {
-    .pricing-tabs {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 0 1rem;
+    /* 섹션 앵커가 고정 헤더+네비에 가리지 않도록 */
+    section {
+        scroll-margin-top: 110px;
     }
-    
+
+    /* 모바일 섹션 네비 */
+    #mobile-section-nav {
+        display: flex;
+        position: sticky;
+        top: 60px;
+        z-index: 90;
+        background: rgba(10, 13, 20, 0.96);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--glass-border);
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        gap: 0;
+    }
+
+    #mobile-section-nav::-webkit-scrollbar { display: none; }
+
+    .msn-item {
+        flex-shrink: 0;
+        padding: 0.65rem 1.1rem;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        font-weight: 700;
+        white-space: nowrap;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: color 0.2s, border-color 0.2s;
+        letter-spacing: -0.2px;
+    }
+
+    .msn-item.active {
+        color: var(--primary);
+        border-bottom-color: var(--primary);
+    }
+
+    /* 요금 탭 버튼 — 가로 스크롤로 변경 */
+    .pricing-tabs {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        gap: 0.6rem;
+        padding: 0 1rem;
+        justify-content: flex-start;
+    }
+    .pricing-tabs::-webkit-scrollbar { display: none; }
+
     .tab-btn {
-        width: 100%;
-        padding: 0.8rem 1.5rem;
+        flex-shrink: 0;
+        width: auto;
+        padding: 0.65rem 1.1rem;
+        font-size: 0.88rem;
+    }
+
+    /* 가격 카드 feat 항목 폰트 조정 */
+    .feat-disc { font-size: 0.88rem; }
+    .feat-orig { font-size: 0.7rem; }
+    .feat-name { font-size: 0.82rem; }
+
+    /* 계산기 select 크기 */
+    .calc-select {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .calc-group h4 {
         font-size: 1rem;
+    }
+
+    /* 결과 박스 */
+    .result-box { padding: 1.2rem; }
+    .total-price { font-size: 1.6rem; }
+
+    /* 가격 카드 패딩 축소 */
+    .price-card {
+        padding: 2.2rem 1.2rem 2rem;
+    }
+
+    /* 섹션 제목 */
+    .section-header h2 { font-size: 1.6rem; }
+
+    /* 포트폴리오 그리드 */
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* check-grid 1열 */
+    .check-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* select-grid 1열 */
+    .select-grid {
+        grid-template-columns: 1fr;
     }
 }
