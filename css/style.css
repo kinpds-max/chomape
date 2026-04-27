@@ -628,6 +628,28 @@ section {
     font-size: 1.6rem; /* Scaled down to fit better */
 }
 
+.ai-design-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ai-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #6c47ff, #00d4ff);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 0.5rem 1.6rem;
+    border-radius: 50px;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 0 20px rgba(108, 71, 255, 0.4);
+}
+
+.ai-design-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
 .price-card.special-monthly {
     border: 2px solid var(--monthly);
     background: linear-gradient(180deg, #161a22 0%, rgba(255, 143, 0, 0.05) 100%);
@@ -645,6 +667,21 @@ section {
     font-size: 0.8rem;
     font-weight: 800;
     box-shadow: 0 0 15px rgba(255, 143, 0, 0.4);
+}
+
+.must-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e03a3a;
+    color: white;
+    padding: 0.3rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    white-space: nowrap;
+    box-shadow: 0 0 15px rgba(224, 58, 58, 0.4);
 }
 
 .price-card {
@@ -734,17 +771,53 @@ section {
 }
 
 .features li {
-    display: block; /* Safer for multi-line/sub-prices */
-    margin-bottom: 1.2rem;
+    display: block;
+    margin-bottom: 1rem;
     color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.88rem;
+}
+
+.features li:not(.include-toggle-wrapper) {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
 }
 
 .features li i {
     color: var(--primary);
-    margin-right: 8px;
-    vertical-align: middle;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.feat-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.feat-prices {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 2px;
+}
+
+.feat-disc {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.82rem;
+}
+
+.feat-orig {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.feat-name {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    word-break: keep-all;
 }
 
 .sub-price {
@@ -752,6 +825,61 @@ section {
     color: var(--accent); /* Yellow */
     margin-left: 4px;
     font-weight: 500;
+}
+
+/* 항목 펼치기 */
+.include-toggle-wrapper {
+    margin-bottom: 1.2rem;
+}
+
+.include-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    gap: 8px;
+}
+
+.include-toggle:hover strong {
+    color: var(--primary);
+}
+
+.toggle-icon {
+    color: var(--primary);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    width: 16px;
+    height: 16px;
+}
+
+.include-toggle.open .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.include-list {
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease;
+    opacity: 0;
+    margin-top: 0;
+    padding-left: 24px;
+    border-left: 2px solid var(--primary);
+    margin-left: 8px;
+}
+
+.include-list.open {
+    max-height: 400px;
+    opacity: 1;
+    margin-top: 8px;
+}
+
+.include-list li {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    padding: 4px 0;
+    margin-bottom: 0 !important;
 }
 
 .item-price {
